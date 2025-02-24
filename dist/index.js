@@ -37717,6 +37717,7 @@ async function run() {
 
 async function reviewCodeWithOpenAI(code, apiKey, reviewType) {
   try {
+    core.info(`Found ${coding_constants.coding_instructions} is the prompt.`);
     const response = await axios.post(
       "https://api.openai.com/v1/chat/completions",
       {
@@ -37725,7 +37726,7 @@ async function reviewCodeWithOpenAI(code, apiKey, reviewType) {
           { role: "system", content: coding_constants.coding_instructions },
           { role: "user", content: code },
         ],
-        temperature: 0.5,
+        temperature: 0.7,
       },
       {
         headers: {
