@@ -37695,7 +37695,7 @@ async function run() {
         owner,
         repo,
         path: file.filename,
-        ref: "main",
+        ref: "master",
       });
 
       const content = Buffer.from(fileContent.content, "base64").toString("utf-8");
