@@ -55,7 +55,7 @@ async function run() {
 
 async function reviewCodeWithOpenAI(code, apiKey, reviewType) {
   try {
-    core.info(`Found ${coding_constants.coding_instructions} is the prompt.`);
+    core.info(`Found ${code} is the content.`);
     const response = await axios.post(
       "https://api.openai.com/v1/chat/completions",
       {
