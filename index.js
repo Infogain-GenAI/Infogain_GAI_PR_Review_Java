@@ -26,6 +26,8 @@ async function run() {
     for (const file of files) {
       if (file.status === "removed") continue;
 
+      core.info(`Found ${file.filename} is a file.`);
+
       // Fetch file content
       const { data: fileContent } = await octokit.repos.getContent({
         owner,
