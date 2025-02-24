@@ -1,12 +1,22 @@
 {
-  "name": "autoreviewer_react",
+  "name": "auto-reviewer",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js -o dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@actions/core": "^1.6.0",
+    "@actions/github": "^5.0.0",
+    "@octokit/rest": "^18.0.0",
+    "axios": "^0.21.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.28.6"
+  }
 }
